@@ -28,7 +28,7 @@ describe "Symbols", "not quite a string, not yet a constant" do
       
       value = :freddiemercury
       
-      value.to_sym.should eq "freddiemercury"
+      value.to_s.should eq "freddiemercury"
       "#{value}".should eq "freddiemercury"
       
     end
@@ -40,7 +40,7 @@ describe "Symbols", "not quite a string, not yet a constant" do
     it "should be a Symbol class" do
       
       value = "freddiemercury"
-      value.to_s.should be_kind_of Symbol
+      value.to_sym.should be_kind_of Symbol
       
     end
     
@@ -49,7 +49,7 @@ describe "Symbols", "not quite a string, not yet a constant" do
       value = "freddiemercury"
       expected_value = :freddiemercury
       
-      value.to_s.should eq expected_value
+      value.to_sym.should eq expected_value
       
     end
     
